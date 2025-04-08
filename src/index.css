@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 330 100% 99%;
+    --foreground: 330 10% 15%;
+
+    --card: 330 20% 98%;
+    --card-foreground: 330 10% 15%;
+
+    --popover: 330 20% 98%;
+    --popover-foreground: 330 10% 15%;
+
+    --primary: 330 82% 65%;
+    --primary-foreground: 330 10% 98%;
+
+    --secondary: 155 70% 90%;
+    --secondary-foreground: 155 70% 25%;
+
+    --muted: 330 20% 95%;
+    --muted-foreground: 330 10% 40%;
+
+    --accent: 43 90% 85%;
+    --accent-foreground: 43 90% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 330 40% 88%;
+    --input: 330 40% 88%;
+    --ring: 330 82% 65%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, rgba(251,207,232,0.3), rgba(244,231,255,0.3));
+}
+
+.cake-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
